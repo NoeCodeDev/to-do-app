@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TaskActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:contentDescription="back home"
+            android:onClick="back_task_list"
+            android:padding="14dp"
+            android:src="@drawable/back_icon"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/edit_task"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="50dp">
+
+        <EditText
+            android:id="@+id/name_task_input2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/name_task"
+            android:inputType="textPersonName"
+            android:textColorHighlight="@color/back_color_icon"
+            android:textColorLink="@color/back_color_icon" />
+
+        <EditText
+            android:id="@+id/date_task_input2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/date_task"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/complete_task_input2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/complete_task"
+            android:inputType="textPersonName" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#DD5B5B"
+                android:text="@string/delete_button"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/update_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#A9F4B4"
+                android:text="@string/update_task"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_nav"
+            android:text="@string/back_to_tasks"
+            android:onClick="back_task_list"/>
+    </LinearLayout>
+
+
+</LinearLayout>
